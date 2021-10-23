@@ -19,5 +19,6 @@ public class Section0401 {
         // 文字列を格納するデータ型で変数名「name」を宣言し、"Java"を代入
         String name;
         name="Java";
+        System.out.println(salary+"\n"+weight+"\n"+isOdd+"\n"+initial+"\n"+name);
     }
 }
