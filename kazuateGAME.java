@@ -22,7 +22,7 @@ public class kazuateGAME {
                 game_flag=false;
             }else{
                 System.out.println("不正解…。残念…！！");
-                System.out.println("答えは"+r_num+"だよ！！");
+                // System.out.println("答えは"+r_num+"だよ！！");
                 if (input_num>r_num) {
                     System.out.println("ヒント！！");                    
                     System.out.println("正解の値は入力された値より小さいよ！！");                    
