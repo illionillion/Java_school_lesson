@@ -6,7 +6,7 @@ public class kazuateGAME {
     public static void main(String[] args) {
         System.out.println("数当てゲーム！！");
         System.out.println("0~9までの整数で当てよう！！");
-        
+
         boolean game_flag=true;
         int r_num=new java.util.Random().nextInt(10);
         int count=0;
@@ -14,7 +14,7 @@ public class kazuateGAME {
         while (game_flag) {
             System.out.println("数字を入力してね！！:");
             int input_num =new java.util.Scanner(System.in).nextInt() ;
-            count++;            
+            count++;
 
             if (input_num==r_num) {
                 System.out.println("正解！！おめでとう！！");
@@ -31,7 +31,7 @@ public class kazuateGAME {
                     System.out.println("ヒント！！");                    
                     System.out.println("正解の値は入力された値より大きいよ！！");                    
                 }
-            }            
+            }
         }
 
 
