@@ -9,7 +9,7 @@ public class HitNumber {
         System.out.println("0～999 までの数値を入力し、10 回で当てろ！");
 
         boolean game_flag=true;
-        int ran=new java.util.Random().nextInt()*1000;
+        int ran=new java.util.Random().nextInt(1000);
         int count=0;
 
         while (game_flag) {
@@ -20,6 +20,7 @@ public class HitNumber {
                 System.out.println("★☆ 正解 ☆★");
                 game_flag=false;
             }else{
+                // System.out.println(ran);
                 if (input_num>ran) {
                     System.out.println("それより小さい数です");                    
                 }
