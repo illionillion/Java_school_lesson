@@ -13,11 +13,6 @@ public class Match23 {
         books=make_book(books,book_num);
         boolean game_flag=true;
 
-        // for (int i = 0; i < book_num; i++) {
-        //     books+="□";
-        // }
-        // System.out.println("マッチの数\n"+books);
-
         String player="";
         while (game_flag) {
 
@@ -33,45 +28,30 @@ public class Match23 {
             book_num-=nyuuryoku;
             books=make_book(books,book_num);
 
-            // books="";
-            // for (int i = 0; i < book_num; i++) {
-            //     books+="□";
-            // }
-            // System.out.println("\n残りマッチの数\n"+books);
-
-            if (book_num<=0) {
-                System.out.println(player+"の負け");
-                game_flag=false;
-                break;
+            game_flag=book_check( game_flag , book_num , player);
+            if (!game_flag) {
+                    break;
             }
+
 
             player="コンピューター";
             nyuuryoku=new Random().nextInt(3) + 1;
-            System.out.print(player+"のターン、1～3で入力 : "+nyuuryoku);
+
+            System.out.println(player+"のターン、1～3で入力 : "+nyuuryoku);
 
             book_num-=nyuuryoku;
             books=make_book(books,book_num);
 
-            // books="";
-            // for (int i = 0; i < book_num; i++) {
-            //     books+="□";
-            // }
-            // System.out.println("\n残りマッチの数\n"+books);
-
-            // game_flag=book_check( game_flag , book_num , player);
-            // if (!game_flag) {
-            //         break;
-            // }
-            if (book_num<=0) {
-                System.out.println(player+"の負け");
-                game_flag=false;
-                break;
+            game_flag=book_check( game_flag , book_num , player);
+            if (!game_flag) {
+                    break;
             }
         }
 
 
     }
 
+    // マッチ出力
     private static String make_book(String books,int book_num) {
         books="";
         for (int i = 0; i < book_num; i++) {
@@ -81,14 +61,15 @@ public class Match23 {
         return books;
     }
 
-    //なぜかうまくいかない
-    // private static boolean book_check(boolean game_flag , int book_num , String player) {
-    //     if (book_num<=0) {
-    //         System.out.println(player+"の負け");
-    //         game_flag=false;
-    //         // break;
-    //         return game_flag;
-    //     }
-    // }
+    //負けかどうか判定
+    private static boolean book_check(boolean game_flag , int book_num , String player) {
+        if (book_num<=0) {
+            System.out.println(player+"の負け");
+            game_flag=false;
+            // break;
+            return game_flag;
+        }
+        return game_flag;
+    }
 
 }
