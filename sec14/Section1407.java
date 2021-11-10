@@ -26,7 +26,7 @@ public class Section1407 {
                     break;
                 case 2:
                     System.out.println("G ");
-                    break;            
+                    break;
                 case 3:
                     System.out.println("C ");
                     break;
