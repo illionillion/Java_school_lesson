@@ -14,7 +14,7 @@ public class Section1606 {
         int input=new Scanner(System.in).nextInt();
         for(int n:numbers){
             if (n==input) {
-                System.out.println("アタリ");
+                System.out.println("アタリ！");
             }
         }
     }
